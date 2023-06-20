@@ -1,0 +1,39 @@
+//A variable that can hold a number of NFT's
+const NFTs = [];
+
+//A function named mintNFT that will hold the metadata for the NFTs
+function mintNFTs(_hat, _clothes, _hair) {
+   const NFT = {
+    "hat" : _hat,
+    "clothes" : _clothes,
+    "hair" : _hair
+   }
+   NFTs.push(NFT);
+}
+
+//listNFTs() function will print all of the NFTs metadata to the console.
+function listNFTs(NFT) {
+
+//A" loop" that will go through an "array" of NFT's
+console.log("The NFT metadata:");
+    for(let i = 0; i < NFTs.length; i++){
+    console.log(i);
+    console.log(NFTs[i]);
+    }
+}
+
+// print the total number of NFTs we have minted to the console
+function getTotalSuppy() {
+    console.log("\nThe length of the NFT is:")
+    console.log(NFTs.length);
+}
+
+// calling the functions 
+
+mintNFTs("Beanie", "Striped Tee", "Mullet");
+mintNFTs("Cowboy Hat", "Sailor Shirt", "Afro");
+mintNFTs("Fisher Hat", "Hawaiian Shirt", "Headband");
+mintNFTs("Halo", "Black T", "Mohawk");
+
+listNFTs();
+getTotalSuppy();
